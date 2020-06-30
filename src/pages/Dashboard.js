@@ -4,7 +4,7 @@ import { MainBody, Sidebar } from '../containers'
 
 const StyledPage = styled.div`
     display: grid;
-    grid-template-columns: 60px 1fr; 
+    grid-template-columns: 3.75rem 1fr; 
     grid-template-rows: 100vh;
 `
 const DashboardPage = () => {

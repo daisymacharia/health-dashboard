@@ -8,8 +8,8 @@ const StyledSidebar = styled.div`
 const Wrapper = styled.div`
     position: fixed;
     height: 100%;
-    border-right: solid 1px #d9d9dd;
-    padding: 30px;
+    border-right: solid 0.06rem #d9d9dd;
+    padding: 1.875rem;
     background-color: #f3f2f7;
 
 `

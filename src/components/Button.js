@@ -3,9 +3,9 @@ import styled from 'styled-components'
 
 const StyledButton = styled.div`
         display: flex;
-        width: 50px;
-        height: 50px;
-        padding: 1px;
+        width: 3.125rem;
+        height: 3.125rem;
+        padding: 0.06rem;
         bottom: 0;
         right: 0;
         cursor: pointer;
@@ -14,12 +14,12 @@ const StyledButton = styled.div`
         align-items: center;
         justify-content: center;
         transition: all .3s ease-in-out;
-        border: 7px solid #f2be42;
+        border: 0.5rem solid #f2be42;
         background: linear-gradient(90deg,#498fc0,#4cb39d);
 
     ::before {
-        width: 10px;
-        height: 20px;
+        width: 0.625rem;
+        height: 1.25rem;
         display: block;
         content: "";
         background-size: contain;

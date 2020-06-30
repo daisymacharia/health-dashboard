@@ -2,32 +2,32 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-          width: 400px;
-          height: 130px;
-          border: solid 1px #e3e3ea;
+          width: 25rem;
+          height: 9.5rem;
+          border: solid 0.06rem #e3e3ea;
           z-index: 1;
           justify-self: end;
           align-self: end;
-          border-radius: 20px;
-          padding: 10px 15px;
+          border-radius: 1.25rem;
+          padding: 0.625rem 1rem;
           
           >div {
             display: flex;
             justify-content: space-between;
             width: 100%;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
 
             h1 {
               margin: 0;
-              font-size: 18px;
-              letter-spacing: 0.5px;
+              font-size: 1.125rem;
+              letter-spacing: 0.0.313rem;
             }
 
             .triangle {
               width: 0;
-              border-left: 20px solid transparent;
-              border-right: 10px solid transparent;
-              border-top: 25px solid #3cba78;
+              border-left: 1.25rem solid transparent;
+              border-right: 0.625rem solid transparent;
+              border-top: 1.5rem solid #3cba78;
               transform: rotate(120deg);
               float: right;
             }
@@ -37,69 +37,68 @@ const Wrapper = styled.div`
             width: max-content;
             
             img {
-              width: 50px;
-              height: 50px;
+              width: 3.125rem;
+              height: 3.125rem;
               border-radius: 50%;
               background-color: #d4e0ed;
-              /* z-index: 2; */
               object-fit: cover;  
               align-self: end;
               justify-self: center;
-              margin-right: -10px;
-              border: solid 2px #ffffff;
+              margin-right: -0.625rem;
+              border: solid 0.125rem #ffffff;
             }
           }
           span {
-            font-size: 11px;
-            width: 90px;
+            font-size: 0.7rem;
+            width: 5.625rem;
           }
 
           .square {
-            width: 30px;
-            height: 30px;
+            width: 1.875rem;
+            height: 1.875rem;
             background-color: #20324d;
-            margin-right: 30px;
+            margin-right: 1.875rem;
           }
 
           &:before{
             content: "";
-            width: 40px;
-            height: 40px;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
             background-color: #f2be42;
-            margin-right: 50px;
-            margin-top: -25px;
+            margin-right: 3.125rem;
+            margin-top: -1.5rem;
             float: right;
           }
 `
 export default function CheckUp() {
-    return (
-        <Wrapper>
-            <div>
-                <h1>
-                    Next Checkup
+  return (
+    <Wrapper>
+      <div>
+        <h1>
+          Next Checkup
                 </h1>
-                <div class="triangle"></div>
-            </div>
-            <div>
-                <div class="profiles">
-                    <img
-                        class="av"
-                        src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
-                    />
-                    <img
-                        class="av"
-                        src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
-                    />
-                    <img
-                        class="av"
-                        src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
-                    />
-                </div>
-                <span> You need to visit 3 doctors next month</span>
-                <div class="square"></div>
-            </div>
-        </Wrapper>
-    )
+        <div class="triangle"></div>
+      </div>
+      <div>
+        <div class="profiles">
+          <img
+            class="av"
+            src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
+          />
+          <img
+            class="av"
+            src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
+          />
+          <img
+            class="av"
+            src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
+          />
+        </div>
+        <span> You need to visit 3 doctors next month</span>
+        <div class="square"></div>
+      </div>
+    </Wrapper>
+  )
 }
 

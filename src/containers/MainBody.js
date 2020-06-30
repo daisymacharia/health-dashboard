@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { CheckUp } from './';
-import { Button, Card } from '../components';
+import { Button, BarChart, Card, Coaching, MedicalRecord, ProgressBar } from '../components';
 
 const MainSection = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 0;
+    padding: 2.5rem 0;
 
 `
 
@@ -19,17 +19,30 @@ const Section1 = styled.div`
 const Section2 = styled.div` 
     display: grid;
     grid-template-rows: repeat(2,min-content);
-    grid-template-columns: repeat(2,.8fr) repeat(2,1fr);
-    grid-gap: 10px;
+    grid-template-columns: repeat(2,.7fr) repeat(2,1fr);
+    grid-gap: 1.25rem;
 `
 
 const Section3 = styled.div` 
+    margin-bottom: 1.25rem;
+
+    .title {
+        margin-bottom: 1.25rem;
+    }
 `
+
+const SectionWrapper = styled.div` 
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.25rem;
+`
+
 const StyledContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 30px;
-    grid-template-rows: 150px 300px 200px;
+    row-gap: 1.875rem;
+    grid-template-rows: 13.125rem 1fr 12.5rem;
     width: 100%;
     height: 100%;
     max-width: 80%;
@@ -38,27 +51,27 @@ const StyledContainer = styled.div`
 
     &:before {
         content: '';
-        width: 600px;
-        height: 600px;
+        width: 40rem;
+        height: 40rem;
         border-radius: 50%;
         background-color: #f2be42;
         position: absolute;
-        top: 75px;
+        top: 6.25rem;
         z-index: 1;
-        left: 155px;
+        left: 9.7rem;
     }
 `
 const UserData = styled.div`
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 1.25rem;
     align-items: center;
     grid-template-columns: auto auto;
 `
 
 const ImageContainer = styled.div`
-    width: 150px;
-    height: 150px;
-    padding: 20px;
+    width: 10.125rem;
+    height: 10.125rem;
+    padding: 1.25rem;
     border-radius: 50%;
     position: relative;
     background-image: url(avatar_ring.svg);
@@ -79,7 +92,7 @@ const Points = styled.div`
     font-size: 5rem;
     }
     div {
-        padding-top: 20px;
+        padding-top: 1.25rem;
     }
 `
 export default function Sidebar() {
@@ -101,14 +114,51 @@ export default function Sidebar() {
                     <CheckUp />
                 </Section1>
                 <Section2>
-                    <Card />
-                    <Card gridRow='1/2' backgroundColor='#ffffff' height='140px' />
-                    <Card gridRow='2/-1' backgroundColor='#ffffff' height='140px' />
-                    <Card gridRow='1/-1' backgroundColor='#20324d' />
+                    <Card>
+                        <ProgressBar />
+                        <BarChart data={[ 65, 75, 90, 67, 65, 45, 70 ]}
+                            label="Water Balance"
+                            points='2.5'
+                            calibration='litres/day'
+                        />
+                    </Card>
+                    <Card gridRow='1/2' backgroundColor='#ffffff' >
+                        <BarChart
+                            data={[ 65, 75, 90, 50, 65, 50, 80 ]}
+                            label="Activity"
+                            bgcolor='#4563eb'
+                            color='#2e3d56'
+                            lastBar='#5ac8c4'
+                            points='3.1'
+                            calibration='min/day'
+                        />
+                    </Card>
+                    <Card gridRow='2/-1' backgroundColor='#ffffff' >
+                        <BarChart
+                            data={[ 65, 75, 85, 50, 65, 90, 95 ]}
+                            label="Sleep"
+                            bgcolor='#4563eb'
+                            color='#2e3d56'
+                            lastBar='#5ac8c4'
+                            points='7.3'
+                            calibration='hours/day'
+                        />
+                    </Card>
+                    <Card gridRow='1/-1' backgroundColor='#20324d'>
+                        <Coaching />
+                    </Card>
                     <Card gridRow='1/-1' backgroundColor='#3cba78' />
                 </Section2>
-            </StyledContainer>
-        </MainSection>
+                <Section3>
+                    <div className="title"> MEDICAL RECORDS</div>
+                    <SectionWrapper>
+                        <MedicalRecord></MedicalRecord>
+                        <MedicalRecord></MedicalRecord>
+                        <MedicalRecord></MedicalRecord>
+                    </SectionWrapper>
+                </Section3>
+            </StyledContainer >
+        </MainSection >
 
     )
 }
