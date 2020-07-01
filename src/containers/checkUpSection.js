@@ -53,7 +53,7 @@ const Wrapper = styled.div`
             width: max-content;
 
             @media all and (min-device-width: 320px) and (max-device-width: 720px) {
-              margin-right: 2rem;
+              margin-right: 1.5rem;
             }
             
             img {
@@ -66,6 +66,11 @@ const Wrapper = styled.div`
               justify-self: center;
               margin-right: -0.625rem;
               border: solid 0.125rem #ffffff;
+
+              @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+                width: 2.5rem;
+                height: 2.5rem;
+              }
             }
           }
           span {
@@ -74,6 +79,7 @@ const Wrapper = styled.div`
 
             @media all and (min-device-width: 320px) and (max-device-width: 720px) {
               width: max-content;
+              font-size: 0.9rem;
             }
           }
 

@@ -52,6 +52,12 @@ const Bottom = styled.div`
 
 const Metadata = styled.div` 
     grid-row: 1/2;
+    
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 
     h2 {
         font-weight: 600;
@@ -62,13 +68,15 @@ const Metadata = styled.div`
 
 const RecordTitle = styled.div` 
     margin-top: 1rem;
-    font-weight: 700;
     font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: .02rem;
+    text-transform: uppercase;
 `
 
 const Date = styled.div` 
     font-weight: 300;
-    font-size: 0.rem;
+    font-size: 0.8rem;
 `
 const ConditionData = styled.div` 
     grid-row: 2/-1;
@@ -102,7 +110,7 @@ const ConditionData = styled.div`
                 }
             }
         &:nth-child(1){
-            margin-right: 2rem;
+            margin-right: 1.5rem;
         }
     }
 

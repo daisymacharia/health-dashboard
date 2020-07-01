@@ -6,6 +6,10 @@ const StyledAvatar = styled.div`
     width: ${props => props.width ? props.width : '3rem'};
     border-radius: 20%;
 
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        margin-left: 0.5rem;
+    }
+    
     img {
         width: 100%;
         height: 100%;

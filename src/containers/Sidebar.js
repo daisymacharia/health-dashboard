@@ -55,6 +55,7 @@ const SidebarMenu = styled.div`
 
     @media all and (min-device-width: 320px) and (max-device-width: 720px) {
         flex-direction: row;
+        align-items: center;
         justify-content: flex-end;
     }
 `
@@ -71,7 +72,7 @@ const MenuItem = styled.div`
     transition: all .3s ease-in-out;
     
     @media all and (min-device-width: 320px) and (max-device-width: 720px) {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
     }
 `
 export default function Sidebar() {

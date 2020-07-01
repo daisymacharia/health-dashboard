@@ -1,6 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components";
 import { MainBody, Sidebar } from '../containers'
+
+const GlobalStyles = createGlobalStyle`
+  @import url("https://fonts.googleapis.com/css2?family=Oxygen");
+
+  body {
+    font-family: 'Oxygen', sans-serif;
+  }
+`
 
 const StyledPage = styled.div`
     display: grid;
@@ -15,6 +23,7 @@ const StyledPage = styled.div`
 const DashboardPage = () => {
     return (
         <StyledPage>
+            <GlobalStyles />
             <Sidebar />
             <MainBody />
         </StyledPage>
