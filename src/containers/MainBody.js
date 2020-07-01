@@ -115,7 +115,7 @@ const UserData = styled.div`
         padding: 0.7rem;
         grid-gap: 1.25rem;
         padding: 1rem .75rem;
-        border-radius: .5rem;
+        border-radius: 1.25rem;
         margin-bottom: 1.25rem;
         border: 1px solid #cecfd9;
     }
@@ -128,6 +128,12 @@ const ImageContainer = styled.div`
     border-radius: 50%;
     position: relative;
     background-image: url(avatar_ring.svg);
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        width: 4rem;
+        height: 4rem;
+        padding: .5rem;
+    }
 `
 
 const Image = styled.img`

@@ -27,6 +27,14 @@ const StyledButton = styled.div`
         background-repeat: no-repeat;
         background-image:  url(menu_button.svg);
     }
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        right: -.15rem;
+        bottom: -.15rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        padding: .35rem;
+        border: .2rem solid var(--muted);
+    }
 `
 
 export default function Button() {
