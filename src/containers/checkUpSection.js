@@ -119,6 +119,7 @@ export default function CheckUp() {
             className="av"
             key={profile}
             src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
+            alt='profile'
           />
           )}
         </div>

@@ -16,7 +16,7 @@ const StyledAvatar = styled.div`
 export default function Avatar(props) {
     return (
         <StyledAvatar {...props}>
-            <img src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg" alt="profile-picture" />
+            <img src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg" alt="avatar" />
         </StyledAvatar>
     )
 }
