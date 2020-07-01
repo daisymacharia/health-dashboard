@@ -19,6 +19,10 @@ const Section2 = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    span {
+        margin-top: 1rem;
+    }
 `
 
 const Section3 = styled.div`

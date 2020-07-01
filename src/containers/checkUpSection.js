@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-          width: 25rem;
+          width: 27rem;
           height: 9.5rem;
           border: solid 0.06rem #e3e3ea;
           z-index: 1;
@@ -23,6 +23,11 @@ const Wrapper = styled.div`
             justify-content: space-between;
             width: 100%;
             margin-bottom: 1rem;
+
+            @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+              justify-content: flex-start;
+              align-items: center;
+            }
 
             h1 {
               margin: 0;
@@ -46,6 +51,10 @@ const Wrapper = styled.div`
 
           .profiles {
             width: max-content;
+
+            @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+              margin-right: 2rem;
+            }
             
             img {
               width: 3.125rem;
@@ -60,8 +69,12 @@ const Wrapper = styled.div`
             }
           }
           span {
-            font-size: 0.7rem;
-            width: 5.625rem;
+            font-size: 1rem;
+            line-height: 1.5;
+
+            @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+              width: max-content;
+            }
           }
 
           .square {
@@ -109,7 +122,7 @@ export default function CheckUp() {
           />
           )}
         </div>
-        <span> You need to visit 3 doctors next month</span>
+        <span> You need to visit <br></br> <strong>3 doctors</strong> next month</span>
         <div className="square"></div>
       </div>
     </Wrapper>

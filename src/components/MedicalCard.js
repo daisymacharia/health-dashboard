@@ -7,12 +7,10 @@ const StyledMedicalRecord = styled.div`
     grid-template-rows: 1fr 1fr;
     height: 100%;
     grid-column-gap: 1.5rem;
-    grid-template-rows: auto;
 
     @media all and (min-device-width: 320px) and (max-device-width: 720px) {
         background-color: white;
         border-radius: 1rem;
-        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 `

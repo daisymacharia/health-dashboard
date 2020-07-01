@@ -14,6 +14,7 @@ const StyledCard = styled.div`
 
         @media all and (min-device-width: 320px) and (max-device-width: 720px) {
             grid-row: auto;
+            padding: 1.5rem;
         }
 `
 
