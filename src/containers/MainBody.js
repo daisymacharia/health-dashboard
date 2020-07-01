@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CheckUp } from './';
-import { Button, BarChart, Card, Coaching, MedicalRecord, ProgressBar } from '../components';
+import { CheckUp, Coaching, Metrics } from './';
+import { Button, BarChart, Card, MedicalRecord, ProgressBar } from '../components';
 
 const MainSection = styled.div`
     display: flex;
@@ -144,10 +144,12 @@ export default function Sidebar() {
                             calibration='hours/day'
                         />
                     </Card>
-                    <Card gridRow='1/-1' backgroundColor='#20324d'>
+                    <Card backgroundColor='#20324d' height='100%'>
                         <Coaching />
                     </Card>
-                    <Card gridRow='1/-1' backgroundColor='#3cba78' />
+                    <Card backgroundColor='#3cba78' height='100%'>
+                        <Metrics></Metrics>
+                    </Card>
                 </Section2>
                 <Section3>
                     <div className="title"> MEDICAL RECORDS</div>
@@ -157,8 +159,8 @@ export default function Sidebar() {
                         <MedicalRecord></MedicalRecord>
                     </SectionWrapper>
                 </Section3>
-            </StyledContainer >
-        </MainSection >
+            </StyledContainer>
+        </MainSection>
 
     )
 }

@@ -71,6 +71,7 @@ const Wrapper = styled.div`
             float: right;
           }
 `
+let profiles = [ 'doc1', 'doc2', 'doc3' ]
 export default function CheckUp() {
   return (
     <Wrapper>
@@ -78,25 +79,19 @@ export default function CheckUp() {
         <h1>
           Next Checkup
                 </h1>
-        <div class="triangle"></div>
+        <div className="triangle"></div>
       </div>
       <div>
-        <div class="profiles">
-          <img
-            class="av"
+        <div className="profiles">
+          {profiles.map(profile => <img
+            className="av"
+            key={profile}
             src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
           />
-          <img
-            class="av"
-            src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
-          />
-          <img
-            class="av"
-            src="https://res.cloudinary.com/daisymacharia/image/upload/v1585563565/_MG_1863.jpg"
-          />
+          )}
         </div>
         <span> You need to visit 3 doctors next month</span>
-        <div class="square"></div>
+        <div className="square"></div>
       </div>
     </Wrapper>
   )

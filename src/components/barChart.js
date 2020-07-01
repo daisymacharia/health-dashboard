@@ -61,7 +61,7 @@ const BarChart = ({ bgcolor, color, label, data = [], lastBar, points, calibrati
             <Label color={color}>
                 <strong>{points}</strong> {calibration}
             </Label>
-        </ChartWrapper >
+        </ChartWrapper>
 
     )
 }
