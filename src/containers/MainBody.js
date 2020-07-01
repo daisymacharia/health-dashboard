@@ -10,18 +10,29 @@ const MainSection = styled.div`
     align-items: center;
     justify-content: center;
     padding: 2.5rem 0;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        /* padding: 1rem; */
+    }
 `
 
 const StyledContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1.875rem;
-    grid-template-rows: 13.125rem min-content 12.5rem;
+    grid-template-rows: 13.125rem 1fr auto;
     width: 100%;
     height: 100%;
     max-width: 80%;
 
     * { z-index: 2; }
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        grid-gap: 1.25rem;
+        max-width: 100%;
+        padding: 1rem;
+        grid-template-rows: auto min-content auto;
+    }
 
     &:before {
         content: '';
@@ -33,12 +44,29 @@ const StyledContainer = styled.div`
         top: 6.25rem;
         z-index: 1;
         left: 9.7rem;
+
+        @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+            z-index: 1;
+            top: .5rem;
+            left: -10rem;
+            width: 100vw;
+            height: 100vh;
+            border-radius: 50%;
+            position: fixed;
+            opacity: .8;
+
+        }
     }
 `
 
 const Section1 = styled.div` 
     display: flex;
     justify-content: space-between;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        flex-direction: column;
+        width: 100%;
+    }
 `
 
 const Section2 = styled.div` 
@@ -46,6 +74,11 @@ const Section2 = styled.div`
     grid-template-rows: repeat(2,min-content);
     grid-template-columns: repeat(2,.7fr) repeat(2,1fr);
     grid-gap: 1.25rem;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+    }
 `
 
 const Section3 = styled.div` 
@@ -64,6 +97,11 @@ const SectionWrapper = styled.div`
     grid-template-columns: repeat(3,1fr);
     grid-gap: 1.25rem;
     height: 100%;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3,1fr);
+    }
 `
 
 const UserData = styled.div`
@@ -71,6 +109,16 @@ const UserData = styled.div`
     grid-gap: 1.25rem;
     align-items: center;
     grid-template-columns: auto auto;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        background-color: white;
+        padding: 0.7rem;
+        grid-gap: 1.25rem;
+        padding: 1rem .75rem;
+        border-radius: .5rem;
+        margin-bottom: 1.25rem;
+        border: 1px solid #cecfd9;
+    }
 `
 
 const ImageContainer = styled.div`
@@ -191,8 +239,8 @@ export default function Sidebar() {
                         </MedicalRecord>
                     </SectionWrapper>
                 </Section3>
-            </StyledContainer >
-        </MainSection >
+            </StyledContainer>
+        </MainSection>
 
     )
 }

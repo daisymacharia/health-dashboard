@@ -7,6 +7,14 @@ const StyledMedicalRecord = styled.div`
     grid-template-rows: 1fr 1fr;
     height: 100%;
     grid-column-gap: 1.5rem;
+    grid-template-rows: auto;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        background-color: white;
+        border-radius: 1rem;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
 `
 
 const MedicalCard = styled.div`
@@ -17,6 +25,10 @@ const MedicalCard = styled.div`
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0px 15px 43px 0px rgba(212,212,212,0.75);
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        border-radius: 1rem;
+    }
 `
 
 const StyledIcon = styled.div`
@@ -34,6 +46,10 @@ const Bottom = styled.div`
     padding: 0.3rem;
     color: white;
     text-align: center;
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        border-bottom-left-radius: 1rem;
+    }
 `
 
 const Metadata = styled.div` 
@@ -54,13 +70,16 @@ const RecordTitle = styled.div`
 
 const Date = styled.div` 
     font-weight: 300;
-    font-size: 0.9rem;
+    font-size: 0.rem;
 `
 const ConditionData = styled.div` 
     grid-row: 2/-1;
     display: flex;
     align-items: flex-end;
-    
+
+    @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+        align-self: center;
+    }
 
     > div {
         display: flex;
@@ -79,6 +98,10 @@ const ConditionData = styled.div`
                 padding: 0.2rem;
                 fill: ${props => props.color};
                 margin-left: 0.5rem;
+
+                @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+                    background-color: #e2e2e3;
+                }
             }
         &:nth-child(1){
             margin-right: 2rem;

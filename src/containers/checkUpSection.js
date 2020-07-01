@@ -10,8 +10,15 @@ const Wrapper = styled.div`
           align-self: end;
           border-radius: 1.25rem;
           padding: 0.625rem 1rem;
+
+          @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+            width: 100%;
+            height: 9.5rem;
+            padding: 1rem .75rem;
+            background: white;
+          }
           
-          >div {
+          > div {
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -30,6 +37,10 @@ const Wrapper = styled.div`
               border-top: 1.5rem solid #3cba78;
               transform: rotate(120deg);
               float: right;
+
+              @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+                display: none;
+              }
             }
           }
 
@@ -58,6 +69,10 @@ const Wrapper = styled.div`
             height: 1.875rem;
             background-color: #20324d;
             margin-right: 1.875rem;
+
+            @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+                display: none;
+            }
           }
 
           &:before{
@@ -69,6 +84,10 @@ const Wrapper = styled.div`
             margin-right: 3.125rem;
             margin-top: -1.5rem;
             float: right;
+
+            @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+                display: none;
+            }
           }
 `
 let profiles = [ 'doc1', 'doc2', 'doc3' ]

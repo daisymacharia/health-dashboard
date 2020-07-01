@@ -11,6 +11,10 @@ const StyledCard = styled.div`
         background-color: ${props => props.backgroundColor ? props.backgroundColor : '#4563eb'};
         border-radius: 1.25rem; 
         padding: 0.625rem 1.5rem 1.25rem;
+
+        @media all and (min-device-width: 320px) and (max-device-width: 720px) {
+            grid-row: auto;
+        }
 `
 
 export default function Card(props) {
