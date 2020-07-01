@@ -1,5 +1,7 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { AiFillDingtalkSquare as Square, AiFillUpCircle as Circle, AiTwotoneSliders as Slider } from 'react-icons/ai';
+import { FaArrowDown as ArrowDown, FaArrowUp as ArrowUp, FaCheck as Check, FaExclamation as Exclamation } from 'react-icons/fa'
 import { CheckUp, Coaching, Metrics } from './';
 import { Button, BarChart, Card, MedicalRecord, ProgressBar } from '../components';
 
@@ -8,41 +10,13 @@ const MainSection = styled.div`
     align-items: center;
     justify-content: center;
     padding: 2.5rem 0;
-
-`
-
-const Section1 = styled.div` 
-    display: flex;
-    justify-content: space-between;
-`
-
-const Section2 = styled.div` 
-    display: grid;
-    grid-template-rows: repeat(2,min-content);
-    grid-template-columns: repeat(2,.7fr) repeat(2,1fr);
-    grid-gap: 1.25rem;
-`
-
-const Section3 = styled.div` 
-    margin-bottom: 1.25rem;
-
-    .title {
-        margin-bottom: 1.25rem;
-    }
-`
-
-const SectionWrapper = styled.div` 
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 1.25rem;
 `
 
 const StyledContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1.875rem;
-    grid-template-rows: 13.125rem 1fr 12.5rem;
+    grid-template-rows: 13.125rem min-content 12.5rem;
     width: 100%;
     height: 100%;
     max-width: 80%;
@@ -61,6 +35,37 @@ const StyledContainer = styled.div`
         left: 9.7rem;
     }
 `
+
+const Section1 = styled.div` 
+    display: flex;
+    justify-content: space-between;
+`
+
+const Section2 = styled.div` 
+    display: grid;
+    grid-template-rows: repeat(2,min-content);
+    grid-template-columns: repeat(2,.7fr) repeat(2,1fr);
+    grid-gap: 1.25rem;
+`
+
+const Section3 = styled.div` 
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        margin-bottom: 1.25rem;
+    }
+`
+
+const SectionWrapper = styled.div` 
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1.25rem;
+    height: 100%;
+`
+
 const UserData = styled.div`
     display: grid;
     grid-gap: 1.25rem;
@@ -154,13 +159,40 @@ export default function Sidebar() {
                 <Section3>
                     <div className="title"> MEDICAL RECORDS</div>
                     <SectionWrapper>
-                        <MedicalRecord></MedicalRecord>
-                        <MedicalRecord></MedicalRecord>
-                        <MedicalRecord></MedicalRecord>
+                        <MedicalRecord Icon={Slider} title='Synevo Laboratory' label='3 pages' date='June 15' recordTitle='Blood Biochemistry'>
+                            <div>
+                                <div className='top'>
+                                    <h2>3</h2>
+                                    <ArrowUp color='green' />
+                                </div>
+                                IMPROVED
+                            </div>
+                            <div>
+                                <div className='top'>
+                                    <h2>1</h2>
+                                    <ArrowDown color='red' />
+                                </div>
+                                WORSENED
+                            </div>
+                        </MedicalRecord>
+                        <MedicalRecord Icon={Square} title='Omnio Clinic' label='5 pages' date='May 12' recordTitle='Abdomen X-ray'>
+                            <div>
+                                <div><Check color='green' /></div>
+                                NO PATOLOGY</div>
+                        </MedicalRecord>
+                        <MedicalRecord Icon={Circle} title='Atkinson Clinic' label='10 pages' date='January 10' recordTitle='Physical test'>
+                            <div>
+                                <div className='top'>
+                                    <h2>2</h2>
+                                    <Exclamation color='red' />
+                                </div>
+                                NOTIFICATIONS
+                            </div>
+                        </MedicalRecord>
                     </SectionWrapper>
                 </Section3>
-            </StyledContainer>
-        </MainSection>
+            </StyledContainer >
+        </MainSection >
 
     )
 }

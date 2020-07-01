@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledAvatar = styled.div`
-    height: 3rem;
-    width: 3rem;
+    height: ${props => props.height ? props.height : '3rem'};
+    width: ${props => props.width ? props.width : '3rem'};
     border-radius: 20%;
 
     img {
